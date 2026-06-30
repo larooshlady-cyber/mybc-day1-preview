@@ -380,11 +380,32 @@ document.querySelectorAll('.copybtn').forEach(b=>b.addEventListener('click',()=>
   navigator.clipboard.writeText(t).then(()=>{const o=b.textContent;b.textContent='Copied ✓';setTimeout(()=>b.textContent=o,1300)});
 }));
 
-// regen — copies a ready command to paste into Claude CLI (run in the MYBC_Day1 folder)
-document.querySelectorAll('.regenbtn').forEach(b=>b.addEventListener('click',()=>{
-  const id=b.dataset.id;
-  const cmd=`Regenerate MYBC post "${id}" from regen/posts.json (same prompt + references), overwrite img/${id}.png, then commit & push.`;
-  navigator.clipboard.writeText(cmd).then(()=>{const o=b.textContent;b.textContent='Copied → paste in Claude CLI';setTimeout(()=>b.textContent=o,1800)});
+// regen — if the local regen-server is running (you opened http://localhost:8787),
+// clicking generates the image right here via Claude CLI + Magnific MCP. Otherwise it
+// falls back to copying a command you can paste into Claude CLI.
+let SERVER=false;
+fetch('/api/health').then(r=>r.ok&&(SERVER=true)).catch(()=>{});
+
+function swapImage(card, file, ts){
+  const img=card.querySelector('img'); const base=file.split('?')[0];
+  img.src=base+'?t='+ts; card.querySelector('.imgwrap').href=base+'?t='+ts;
+}
+
+document.querySelectorAll('.regenbtn').forEach(b=>b.addEventListener('click', async ()=>{
+  const id=b.dataset.id; const card=b.closest('.card'); const orig=b.textContent;
+  if(SERVER){
+    b.disabled=true; b.textContent='⏳ Generating… ~2 min';
+    try{
+      const r=await fetch('/api/regen',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({id})});
+      const j=await r.json();
+      if(j.ok){ swapImage(card, j.file, j.ts); b.textContent='Updated ✓'; }
+      else { b.textContent='Failed — retry'; console.error(j); }
+    }catch(e){ b.textContent='Failed — retry'; console.error(e); }
+    setTimeout(()=>{b.textContent=orig; b.disabled=false;},2500);
+  } else {
+    const cmd=`Regenerate MYBC post "${id}" from regen/posts.json (same prompt + references), overwrite img/${id}.png, then commit & push.`;
+    navigator.clipboard.writeText(cmd).then(()=>{b.textContent='Copied → paste in Claude CLI';setTimeout(()=>b.textContent=orig,1800)});
+  }
 }));
 </script>
 </body>

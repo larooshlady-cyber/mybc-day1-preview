@@ -1,5 +1,27 @@
 # MYBC Week 1 — Regenerate a post's image (local, Claude CLI + Magnific MCP)
 
+## ⭐ One-click button (recommended)
+Run the local server, open the local page, and the **↻ Regen** button on each post
+generates the image right there — no chat, no paste.
+
+```bash
+cd ~/Desktop/MYBC_Day1
+node regen-server.js        # starts http://localhost:8787 (loopback only)
+```
+Then open **http://localhost:8787** and click **↻ Regen** on any post.
+Behind the scenes it runs `claude -p` headless (which has the Magnific MCP), regenerates
+that post from `regen/posts.json`, overwrites `img/<id>.png`, and swaps it into the page (~2 min).
+
+Notes:
+- Needs the `claude` CLI on PATH with Magnific available (it is, in `/Users/georgematiashvili`).
+- Works only on the **local** page (http://localhost:8787). The public GitHub Pages copy
+  can't call your machine, so there the button falls back to copy-a-command.
+- The server does not commit/push. To publish a re-rolled image: `git add -A && git commit -m regen && git push`.
+
+---
+
+## Manual / CLI way
+
 Every post's image can be re-rolled locally. No website button, no API key — it runs
 through **Claude CLI** with the **Magnific MCP** connected (the same setup used to build these).
 
