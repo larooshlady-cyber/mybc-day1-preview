@@ -55,7 +55,7 @@
   .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;
     border-top:3px solid var(--c,var(--line));display:flex;flex-direction:column}
   .card a.imgwrap{display:block;position:relative}
-  .card img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#000}
+  .card img,.card video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#000}
   .card-head{display:flex;align-items:center;gap:9px;padding:12px 14px 8px}
   .slot{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:10px;letter-spacing:.07em;color:var(--bg);background:var(--c,#888);border-radius:5px;padding:3px 7px}
   .oname{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13.5px;color:var(--c,var(--ink))}
@@ -79,11 +79,11 @@
   <header>
     <div class="eyebrow">Week 1 · Static creatives + copy</div>
     <h1>MYBC — <span class="glow">Week 1</span> · Jun 29 → Jul 5</h1>
-    <p class="sub">World Cup <b>Round of 32 → Round of 16</b>. Every scheduled post has its <b>own unique visual</b> (16:9, 2752×1536) and full <b>Telegram caption</b>. Click any image to open full-size; hit <b>Copy</b> for the caption. <b>↻ Regen</b> copies a ready command — paste it into Claude CLI (in the <code>MYBC_Day1</code> folder) to re-roll that image locally. Videos come next.</p>
+    <p class="sub">World Cup <b>Round of 32 → Round of 16</b>. Every scheduled post has its <b>own unique visual</b> (16:9, 2752×1536) and full <b>Telegram caption</b>. Each post is a <b>5s animation</b> (1080p, autoplay loop). Hit <b>Copy</b> for the caption. <b>↻ Regen</b> copies a ready command — paste it into Claude CLI (in the <code>MYBC_Day1</code> folder) to re-roll that image locally. </p>
     <div class="meta-row">
       <div class="chip">Days · <b>7</b></div>
       <div class="chip">Posts · <b>18</b></div>
-      <div class="chip">Unique visuals · <b>18</b></div>
+      <div class="chip">Animated · <b>18 × 5s</b></div>
       <div class="chip">Format · <b>16:9 · 2K</b></div>
     </div>
     <div class="legend" id="legend"></div>
@@ -363,7 +363,7 @@ DAYS.forEach((day,di)=>{
     const id='c'+di+'_'+pi; const c=COL[p.k];
     const pid=p.img.split('/').pop().replace('.png','');
     return `<div class="card" style="--c:var(${c})">
-      <a class="imgwrap" href="${p.img}" target="_blank"><img src="${p.img}" alt="${p.name}"></a>
+      <video src="video/${pid}.mp4" poster="${p.img}" autoplay muted loop playsinline preload="metadata"></video>
       <div class="card-head"><span class="slot">${p.slot}</span><span class="oname">${p.name}</span><button class="regenbtn" data-id="${pid}" title="Copy CLI command to regenerate this image">↻ Regen</button><button class="copybtn" data-t="${id}">Copy</button></div>
       <div class="copy" id="${id}">${p.cap}</div>
     </div>`;
