@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MYBC · ARG vs CPV — VS card options</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0d1a;--panel:#121829;--line:#23304f;--ink:#eaf0ff;--dim:#93a0c2}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;padding:30px 20px 60px}
+.wrap{max-width:1200px;margin:0 auto}
+h1{font-family:'Space Grotesk',sans-serif;font-size:28px;margin-bottom:4px}
+.sub{color:var(--dim);font-size:14px;margin-bottom:8px}
+.note{color:var(--dim);font-size:12.5px;font-family:'JetBrains Mono',monospace;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.cell{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center}
+.tile{display:block;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#000;aspect-ratio:1/1}
+.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.lab{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink);margin-top:9px;font-weight:700}
+.desc{font-size:11px;color:var(--dim);margin-top:3px;line-height:1.35}
+.sec{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim);letter-spacing:.12em;text-transform:uppercase;margin:26px 0 10px}
+.small{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.chip{background:#0f1424;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--dim)}
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr)}}
+</style></head><body><div class="wrap">
+<h1>ARG vs Cape Verde — VS card · 10 options</h1>
+<div class="sub">1:1 · 2752px · click any tile to open full-size. Pick the one(s) you want; tell me the number(s).</div>
+<div class="note">All centered VS · rim light + contrast for small-tile readability. v05 has a wrong FIFA wordmark ("Qatar 2022") — flag it if you pick it and I'll fix.</div>
+<div class="grid" id="g"></div>
+<div class="sec">How it looks in the carousel slot (mini preview)</div>
+<div class="small" id="mini"></div>
+</div>
+<script>
+const items=[
+["v01","Angled · gold VS","Flags angled inward, gold VS + cyan glow"],
+["v02","Angled · compact","Same, smaller flags, more bg"],
+["v03","Banners · cyan diamond","Tall banners, cyan diamond VS — clean"],
+["v04","Glow rim · high contrast","Heavy cyan rim-light, very punchy"],
+["v05","Crossed poles · gold","Premium crossed flags (⚠ wrong WC text)"],
+["v06","Crossing · gold VS","Flags crossing behind gold VS"],
+["v07","Diagonal split","ARG top-left / CPV bottom-right, cyan seam"],
+["v08","Diagonal split 2","Split variant, brighter seam"],
+["v09","Badge VS · 2026","Dark VS medallion — best small readability"],
+["v10","Ring VS · clean","Cyan-ring VS badge, tidy layout"]
+];
+g.innerHTML=items.map(([id,lab,desc])=>`<div class="cell"><a class="tile" href="vs/${id}.png" target="_blank"><img src="vs/${id}.png" loading="lazy" alt="${lab}"></a><div class="lab">${id.toUpperCase()} · ${lab}</div><div class="desc">${desc}</div></div>`).join('');
+mini.innerHTML=items.map(([id])=>`<a href="vs/${id}.png" target="_blank" style="display:block;width:96px;height:96px;border-radius:18px;overflow:hidden;border:1px solid #23304f"><img src="vs/${id}.png" style="width:100%;height:100%;object-fit:cover" loading="lazy"></a>`).join('');
+</script></body></html>
