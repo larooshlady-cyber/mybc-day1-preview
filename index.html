@@ -59,7 +59,10 @@
   .card-head{display:flex;align-items:center;gap:9px;padding:12px 14px 8px}
   .slot{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:10px;letter-spacing:.07em;color:var(--bg);background:var(--c,#888);border-radius:5px;padding:3px 7px}
   .oname{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13.5px;color:var(--c,var(--ink))}
-  .copybtn{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.05em;color:var(--bg);background:var(--c,#888);border:none;border-radius:5px;padding:4px 8px;cursor:pointer}
+  .regenbtn{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.05em;color:var(--c,#ccc);background:transparent;border:1px solid var(--c,#888);border-radius:5px;padding:4px 8px;cursor:pointer}
+  .regenbtn:hover{background:var(--c,#888);color:var(--bg)}
+  .regenbtn:active{transform:translateY(1px)}
+  .copybtn{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.05em;color:var(--bg);background:var(--c,#888);border:none;border-radius:5px;padding:4px 8px;cursor:pointer}
   .copybtn:active{transform:translateY(1px)}
   .copy{padding:0 14px 14px;font-size:12px;line-height:1.55;color:var(--ink-dim);white-space:pre-wrap;flex:1}
 
@@ -76,7 +79,7 @@
   <header>
     <div class="eyebrow">Week 1 · Static creatives + copy</div>
     <h1>MYBC — <span class="glow">Week 1</span> · Jun 29 → Jul 5</h1>
-    <p class="sub">World Cup <b>Round of 32 → Round of 16</b>. Every scheduled post has its <b>own unique visual</b> (16:9, 2752×1536) and full <b>Telegram caption</b>. Click any image to open full-size; hit <b>Copy</b> for the caption. Videos come next.</p>
+    <p class="sub">World Cup <b>Round of 32 → Round of 16</b>. Every scheduled post has its <b>own unique visual</b> (16:9, 2752×1536) and full <b>Telegram caption</b>. Click any image to open full-size; hit <b>Copy</b> for the caption. <b>↻ Regen</b> copies a ready command — paste it into Claude CLI (in the <code>MYBC_Day1</code> folder) to re-roll that image locally. Videos come next.</p>
     <div class="meta-row">
       <div class="chip">Days · <b>7</b></div>
       <div class="chip">Posts · <b>18</b></div>
@@ -358,9 +361,10 @@ const wk=document.getElementById('week');
 DAYS.forEach((day,di)=>{
   const cards = day.posts.map((p,pi)=>{
     const id='c'+di+'_'+pi; const c=COL[p.k];
+    const pid=p.img.split('/').pop().replace('.png','');
     return `<div class="card" style="--c:var(${c})">
       <a class="imgwrap" href="${p.img}" target="_blank"><img src="${p.img}" alt="${p.name}"></a>
-      <div class="card-head"><span class="slot">${p.slot}</span><span class="oname">${p.name}</span><button class="copybtn" data-t="${id}">Copy</button></div>
+      <div class="card-head"><span class="slot">${p.slot}</span><span class="oname">${p.name}</span><button class="regenbtn" data-id="${pid}" title="Copy CLI command to regenerate this image">↻ Regen</button><button class="copybtn" data-t="${id}">Copy</button></div>
       <div class="copy" id="${id}">${p.cap}</div>
     </div>`;
   }).join('');
@@ -370,10 +374,17 @@ DAYS.forEach((day,di)=>{
   </section>`);
 });
 
-// copy
+// copy caption
 document.querySelectorAll('.copybtn').forEach(b=>b.addEventListener('click',()=>{
   const t=document.getElementById(b.dataset.t).innerText;
   navigator.clipboard.writeText(t).then(()=>{const o=b.textContent;b.textContent='Copied ✓';setTimeout(()=>b.textContent=o,1300)});
+}));
+
+// regen — copies a ready command to paste into Claude CLI (run in the MYBC_Day1 folder)
+document.querySelectorAll('.regenbtn').forEach(b=>b.addEventListener('click',()=>{
+  const id=b.dataset.id;
+  const cmd=`Regenerate MYBC post "${id}" from regen/posts.json (same prompt + references), overwrite img/${id}.png, then commit & push.`;
+  navigator.clipboard.writeText(cmd).then(()=>{const o=b.textContent;b.textContent='Copied → paste in Claude CLI';setTimeout(()=>b.textContent=o,1800)});
 }));
 </script>
 </body>
