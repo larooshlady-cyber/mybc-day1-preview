@@ -1,0 +1,144 @@
+{
+  "_about": "MYBC Week 1 regenerate manifest. Each post stores the exact Magnific generation so any can be re-rolled locally via Claude CLI + Magnific MCP. See README.md.",
+  "model": "imagen-nano-banana-2",
+  "aspectRatio": "16:9",
+  "resolution": "2k",
+  "refs": {
+    "logo": "aQeRaJlfSh",
+    "ui": "62SQ6I5iJO",
+    "dice_duel": "ONx1oPGynm",
+    "mines": "LUFu0LMswO",
+    "limbo": "9RlLt4wNYZ",
+    "tower_legend": "1sCan1Cr4r",
+    "hilo": "jSQE0scLD0",
+    "rock_paper_scissors": "1sCaYxhr4r"
+  },
+  "posts": [
+    {
+      "id": "welcome",
+      "day": "Mon Jun 29", "slot": "MORN", "offer": "Welcome Bonus",
+      "file": "img/welcome.png",
+      "refs": ["logo", "ui"],
+      "prompt": "Ultra realistic cinematic MYBC Welcome Bonus promo visual, dark purple and navy luxury casino mood with warm gold light. Foreground: three premium black-and-gold gift chests in a row on a glossy dark casino table, clearly labeled \"1ST\", \"2ND\", \"3RD\", each open and glowing from inside, overflowing with cash bundles, gold USDT coins and golden free-round spin tokens. Above and between them floats a polished gold \"WELCOME BONUS\" emblem badge with warm light. Floating gold coins and black-gold casino chips, soft smoke, subtle green table reflections. Background: blurred MYBC casino dashboard on a laptop (use the MYBC dashboard UI reference), purple UI glow, orange CTA bokeh, unreadable UI. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. Small premium gold plaque reading: \"100% CASH + 100% FREE ROUNDS\" and \"UP TO 1500 USDT + 1500 FR\". Shallow depth of field, 85mm lens, ultra realistic high-end commercial product photography, 16:9. No people, no hands, no cartoon, no cheap plastic render."
+    },
+    {
+      "id": "deposit",
+      "day": "Mon Jun 29", "slot": "EVE", "offer": "Deposit Bonus",
+      "file": "img/deposit.png",
+      "refs": ["logo", "ui"],
+      "prompt": "Photorealistic high-end MYBC 100% Deposit Bonus advertising visual, dark purple casino mood with gold rim light. On a glossy dark purple casino table: a large polished gold \"100%\" sculpture standing upright with warm reflections and beveled edges, beside a heavy polished gold \"X2\" symbol, with stacks of gold USDT coins, black-and-gold casino chips and realistic cash bundles arranged naturally around them. A black-and-gold MYBC gift box sits slightly open behind, glowing warmly from inside. Background: blurred MYBC casino dashboard on a laptop and a phone (use the MYBC dashboard UI reference), deep purple interface with orange CTA buttons, soft smoke, green accent reflections, unreadable UI, bokeh lights. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. Small premium gold plaque reading: \"100% CASH BONUS\" and \"UP TO 200 USDT · 20X SLOTS\". Shot on cinema camera, 85mm lens, f/1.8, realistic global illumination, physically accurate reflections, luxury crypto casino advertising photography, 16:9. No people, no hands, no cartoon, no cheap plastic."
+    },
+    {
+      "id": "worldcup_r32",
+      "day": "Mon Jun 29", "slot": "LATE", "offer": "World Cup R32",
+      "file": "img/worldcup_r32.png",
+      "refs": ["logo", "ui"],
+      "prompt": "Photorealistic cinematic MYBC World Cup matchday hero visual, Round of 32 kickoff energy. Center: a realistic golden FIFA-style World Cup trophy glowing under stadium floodlights on fresh green stadium grass, a realistic soccer ball resting beside it, and a premium smartphone showing the MYBC betting app (use the MYBC app UI reference for the phone screen, slightly blurred). Behind them: a giant glowing tournament knockout-bracket motif fading into a night stadium, dramatic blue and purple light beams, golden confetti, crowd bokeh, soft fog. Dark purple MYBC brand shadows mixed with warm stadium gold. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. Bold readable premium text: \"ROUND OF 32\" and \"LIVE NOW\". Premium sportsbook campaign style, sharp foreground, shallow depth of field, ultra realistic commercial photography, 16:9. No players, no human faces, no casino chips, no cartoon."
+    },
+    {
+      "id": "signup",
+      "day": "Tue Jun 30", "slot": "MORN", "offer": "Sign-Up Gift",
+      "file": "img/signup.png",
+      "refs": ["logo", "ui"],
+      "prompt": "Ultra realistic cinematic MYBC Sign-Up Gift visual, dark purple and navy luxury casino mood, warm gold light. Foreground: three premium floating reward objects in a row above a glossy dark casino table, each lifted on its own glowing gold pedestal of light — (1) a black-and-gold FREEBET ticket reading \"$10 FREEBET\", (2) a glowing golden slot/spins token reading \"50 SPINS\", (3) a stack of golden free-round spin coins reading \"75 FREE ROUNDS\". Above and between them a polished gold \"CHOOSE YOUR GIFT\" emblem badge. A small glowing blue Telegram paper-plane icon and a smartphone with a green verified checkmark float nearby. Floating gold coins, soft smoke, green table reflections. Background: blurred MYBC casino dashboard on a laptop (use the MYBC dashboard UI reference), purple UI glow, orange CTA bokeh, unreadable UI. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. Small gold plaque reading: \"PICK YOUR GIFT\" and \"+$15 FOR TELEGRAM & MOBILE\". 85mm, shallow depth of field, ultra realistic high-end commercial photography, 16:9. No people, no hands, no cartoon, no cheap plastic."
+    },
+    {
+      "id": "freebet",
+      "day": "Tue Jun 30", "slot": "EVE", "offer": "Insured Freebet",
+      "file": "img/freebet.png",
+      "refs": ["logo", "ui"],
+      "prompt": "Photorealistic cinematic MYBC Insured Freebet sportsbook visual. Center: a premium black-and-gold betting ticket standing upright on fresh green stadium grass, protected by a transparent glowing shield outline, with a realistic soccer ball resting beside it. Bold readable text on the ticket: \"BET INSURED\" and \"100% BACK AS FREEBET\". Behind: a golden World Cup-style trophy softly blurred under stadium floodlights, blue and purple light beams, soft fog, golden confetti, crowd bokeh. Dark purple MYBC brand shadows mixed with stadium light and gold accents. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. Small gold plaque reading: \"UP TO 100 USDT FREEBET\". Premium sportsbook campaign style, sharp foreground, shallow depth of field, ultra realistic commercial photography, 16:9. No players, no human faces, no casino chips, no cartoon."
+    },
+    {
+      "id": "trust",
+      "day": "Wed Jul 1", "slot": "MORN", "offer": "Trustpilot · 50 FS",
+      "file": "img/trust.png",
+      "refs": ["dice_duel", "logo", "ui"],
+      "prompt": "Ultra realistic cinematic MYBC Trustpilot reward visual, dark purple luxury casino mood, warm gold light. Left: the MYBC Originals \"Dice Duel\" game card floating — use the Dice Duel thumbnail reference as EXACT artwork (purple card, pink & white 3D dice, white \"ORIGINALS\" corner ribbon). Center: a clean white-and-green review card showing five green stars and a green \"REVIEW PUBLISHED\" check badge with the Trustpilot star. Right: a large polished gold coin reading \"50 FS\" with \"MYBC ORIGINALS\" engraved around the rim, glowing warmly. Glowing gold arrows flow left to right from the card, through the review, to the coin. Floating gold coins, soft smoke, green accent reflections, glossy dark casino table. Background: blurred MYBC casino dashboard on a laptop (use the MYBC dashboard UI reference), purple UI glow, orange CTA bokeh, unreadable UI. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. Small gold plaque: \"50 FREE SPINS\" and \"FOR AN HONEST REVIEW\". 85mm, shallow depth of field, ultra realistic commercial photography, 16:9. No people, no hands, no cartoon."
+    },
+    {
+      "id": "variety",
+      "day": "Wed Jul 1", "slot": "AFTN", "offer": "Game Variety",
+      "file": "img/variety.png",
+      "refs": ["dice_duel", "mines", "limbo", "tower_legend", "hilo", "rock_paper_scissors", "logo"],
+      "prompt": "Ultra realistic cinematic MYBC game-variety visual, dark luxury casino mood, deep purple and navy, warm gold lights. A cinematic floating 3D cluster of premium glossy game tiles with depth and slight overlap: a slots-reel tile (777), a live-dealer roulette wheel tile, a live blackjack tile, and the SIX MYBC Originals cards using the attached thumbnails as EXACT artwork — Dice Duel (purple, pink & white dice), Mines (green-blue, FIFA ball on red tile), Limbo (teal, blue 500x/1000x tiles), Tower Legend (green, light-blue stone tower), Hilo (teal-blue, orange cards with red \"J heart\"), Rock Paper Scissors (blue-purple, three 3D hands) — each keeping its white \"ORIGINALS\" corner ribbon and game name. Floating gold coins and black-gold MYBC chips, soft smoke, blurred slot machines, glossy black casino table below, cinematic shallow depth of field. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. Bold premium gold text: \"THOUSANDS OF GAMES · ONE APP\". Ultra realistic 3D product photography, 16:9. No people except inside the live-dealer tiles and the Rock Paper Scissors card. Do not change the game artwork."
+    },
+    {
+      "id": "cashback",
+      "day": "Thu Jul 2", "slot": "MORN", "offer": "48% Cashback",
+      "file": "img/cashback.png",
+      "refs": ["logo", "ui"],
+      "prompt": "Photorealistic high-end MYBC 48% Cashback visual, dark purple casino mood with gold rim light. On a glossy dark purple casino table: a large polished gold \"48%\" sculpture standing upright with warm reflections and beveled edges, wrapped by a glowing circular cashback arrow loop made of gold light (recycle-style arrows). Gold USDT coins flow back into a growing stack along the arrow loop; black-and-gold casino chips nearby; faint smoke; subtle sparkles. Background: blurred MYBC casino dashboard on a laptop and phone (use the MYBC dashboard UI reference), deep purple interface with orange CTA buttons, green accent reflections, unreadable UI, bokeh. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. Small gold plaque reading: \"48% CASHBACK\" and \"ALWAYS WORKING\". 85mm f/1.8, realistic global illumination, luxury crypto casino advertising photography, 16:9. No people, no hands, no cartoon, no cheap plastic."
+    },
+    {
+      "id": "drop",
+      "day": "Thu Jul 2", "slot": "EVE", "offer": "Free Rounds Drop",
+      "file": "img/drop.png",
+      "refs": ["dice_duel", "mines", "limbo", "tower_legend", "hilo", "rock_paper_scissors", "logo"],
+      "prompt": "Ultra realistic cinematic MYBC Free Rounds Drop visual, dark luxury casino, deep purple and navy, warm gold light, celebratory. A floating 3D cluster of the SIX MYBC Originals game cards at different heights, rotations and slight overlap in a natural arc. Use the attached MYBC Originals thumbnails as the EXACT artwork for each card — Dice Duel (purple card, pink & white 3D dice), Mines (green-blue card, FIFA World Cup ball on red tile), Limbo (teal card, blue 500x & 1000x tiles), Tower Legend (green card, light-blue stone tower), Hilo (teal-to-blue card, orange cards with a red \"J heart\"), Rock Paper Scissors (blue-to-purple card, three 3D hands) — each keeping its white diagonal \"ORIGINALS\" corner ribbon and game name. In the foreground-center a polished gold \"MYBC ORIGINALS · FR DROP\" badge. Golden free-round spin coins and gold confetti burst around the cards, floating FR tokens, soft smoke, blurred slot machines, glossy black casino table below, cinematic shallow depth of field. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. Bold premium gold text: \"FREE ROUNDS DROP\". Ultra realistic 3D product photography, 16:9. No people, no hands except inside the Rock Paper Scissors card, no cartoon."
+    },
+    {
+      "id": "worldcup_r16",
+      "day": "Sat Jul 4", "slot": "EVE", "offer": "World Cup R16",
+      "file": "img/worldcup_r16.png",
+      "refs": ["logo", "ui"],
+      "prompt": "Photorealistic cinematic MYBC World Cup matchday hero visual, Round of 16 energy. Center: a realistic golden FIFA-style World Cup trophy glowing under stadium floodlights on fresh green stadium grass, a realistic soccer ball resting beside it, and a premium smartphone showing the MYBC betting app (use the MYBC app UI reference for the phone screen, slightly blurred). Behind: a giant glowing tournament knockout-bracket motif narrowing to the last 16, fading into a night stadium, dramatic blue and purple light beams, golden confetti, crowd bokeh, soft fog. Dark purple MYBC brand shadows mixed with warm stadium gold. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. Bold readable premium text: \"ROUND OF 16\" and \"LIVE NOW\". Premium sportsbook campaign style, sharp foreground, shallow depth of field, ultra realistic commercial photography, 16:9. No players, no human faces, no casino chips, no cartoon."
+    },
+    {
+      "id": "welcome2",
+      "day": "Fri Jul 3", "slot": "MORN", "offer": "Welcome Bonus (alt)",
+      "file": "img/welcome2.png",
+      "refs": ["logo", "ui"],
+      "prompt": "Ultra realistic cinematic MYBC Welcome Package visual, dark purple and navy luxury casino mood, warm gold light. Center: three glowing ascending podium steps rising left to right, each topped with a small gold deposit marker \"1ST\", \"2ND\", \"3RD\", with cash bundles and gold USDT coins cascading down the steps and golden free-round spin coins mixed in. Above, a large premium gold hero number \"1500 + 1500\" with a small \"USDT + FREE ROUNDS\" label, and a polished \"WELCOME PACKAGE\" ribbon. Floating gold coins, soft smoke, green table reflections. Background: blurred MYBC dashboard on a laptop (use the MYBC dashboard UI reference), purple UI glow, orange CTA bokeh, unreadable UI. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. Small gold plaque: \"WELCOME PACKAGE\" and \"UP TO 1500 USDT + 1500 FR\". 85mm, shallow depth of field, ultra realistic commercial photography, 16:9. No people, no hands, no cartoon."
+    },
+    {
+      "id": "deposit2",
+      "day": "Wed Jul 1", "slot": "EVE", "offer": "Deposit Bonus (X2 Cash)",
+      "file": "img/deposit2.png",
+      "refs": ["logo", "ui"],
+      "prompt": "Photorealistic high-end MYBC X2 deposit visual, dark purple casino mood, gold rim light. On a glossy dark casino table: a huge polished gold \"X2\" beside a bold gold \"CASH\" wordmark, a black-and-gold MYBC gift box open and glowing behind them, thick stacks of cash bundles and gold USDT coins in front, black-and-gold casino chips scattered around. Warm golden glow, faint smoke, rising sparkles. Background: blurred MYBC dashboard on a laptop and phone (use the MYBC dashboard UI reference), purple interface, orange CTA buttons, green reflections, unreadable UI. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. Small gold plaque: \"100% CASH BONUS\" and \"UP TO 200 USDT · 20X SLOTS\". 85mm f/1.8, realistic global illumination, luxury crypto casino advertising photography, 16:9. No people, no hands, no cartoon."
+    },
+    {
+      "id": "deposit3",
+      "day": "Fri Jul 3", "slot": "EVE", "offer": "Deposit Bonus (Briefcase)",
+      "file": "img/deposit3.png",
+      "refs": ["logo", "ui"],
+      "prompt": "Photorealistic high-end MYBC deposit bonus visual, dark purple casino mood, gold rim light. Center: an open black-and-gold metallic briefcase on a glossy dark casino table, packed with neat cash bundles and gold USDT coins, glowing warmly from inside, a polished gold \"X2\" standing upright inside the lid and a small gold plaque reading \"100% CASH BONUS · UP TO 200 USDT\" leaning against the case. Black-and-gold MYBC chips and loose gold coins around it, faint smoke. Background: blurred MYBC dashboard on a laptop (use the MYBC dashboard UI reference), purple UI glow, orange CTA bokeh, unreadable UI. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. 85mm f/1.8, realistic reflections, luxury casino advertising photography, 16:9. No people, no hands, no cartoon."
+    },
+    {
+      "id": "deposit4",
+      "day": "Sun Jul 5", "slot": "EVE", "offer": "Deposit Bonus (Card)",
+      "file": "img/deposit4.png",
+      "refs": ["logo", "ui"],
+      "prompt": "Photorealistic cinematic MYBC 100% Deposit Bonus visual, dark purple casino mood, gold light. Center: a premium black-and-gold card/plaque standing upright on a glossy dark purple casino table, reading \"MYBC 100% DEPOSIT BONUS\" with smaller \"EXTRA CASH UP TO 200 USDT\", glowing edges, a metallic \"2X\" badge on its corner. Around it: neat cash bundles, gold USDT coins and black-and-gold casino chips, a soft golden light streak crossing the scene. Background: blurred MYBC dashboard on a laptop and phone (use the MYBC dashboard UI reference), deep purple interface, orange CTA buttons, green table reflections, soft smoke, bokeh, unreadable UI. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. 85mm, shallow depth of field, ultra realistic commercial photography, 16:9. No people, no hands, no cartoon."
+    },
+    {
+      "id": "signup2",
+      "day": "Sat Jul 4", "slot": "MORN", "offer": "Sign-Up Gift (alt)",
+      "file": "img/signup2.png",
+      "refs": ["logo", "ui"],
+      "prompt": "Ultra realistic cinematic MYBC Sign-Up Gift visual, dark purple and navy luxury casino mood, warm gold light. Center: a premium smartphone standing upright showing a glowing green KYC \"VERIFIED\" checkmark on its screen, with three floating premium reward cards fanned out above it — a \"$10 FREEBET\" card, a \"50 SPINS\" card, and a \"75 FREE ROUNDS\" card — each glossy with gold edges. A small glowing blue Telegram paper-plane icon floats nearby. Floating gold coins, soft smoke, green reflections, glossy dark casino table. Background: blurred MYBC dashboard on a laptop (use the MYBC dashboard UI reference), purple UI glow, orange CTA bokeh, unreadable UI. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. Small gold plaque: \"PICK YOUR GIFT\" and \"+$15 FOR TELEGRAM & MOBILE\". 85mm, shallow depth of field, ultra realistic commercial photography, 16:9. No people, no hands, no cartoon."
+    },
+    {
+      "id": "freebet2",
+      "day": "Fri Jul 3", "slot": "LATE", "offer": "Insured Freebet (alt)",
+      "file": "img/freebet2.png",
+      "refs": ["logo", "ui"],
+      "prompt": "Photorealistic cinematic MYBC Insured Freebet sportsbook visual. Center: a premium smartphone showing the MYBC app (use the MYBC app UI reference for the screen, slightly blurred), tilted dynamically, with a black-and-gold ticket reading \"FREEBET BACK · UP TO 100 USDT\" flying out of it alongside a realistic soccer ball, cash bills and gold coins raining around, all behind a transparent glowing protective shield outline. Background: night stadium floodlights, blue and purple light beams, golden confetti, soft fog, crowd bokeh. Dark purple MYBC brand shadows mixed with stadium gold. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. Bold readable text: \"YOUR FREEBET IS INSURED\". Premium sportsbook campaign style, shallow depth of field, ultra realistic commercial photography, 16:9. No players, no human faces, no cartoon."
+    },
+    {
+      "id": "variety2",
+      "day": "Sat Jul 4", "slot": "AFTN", "offer": "Game Variety (alt)",
+      "file": "img/variety2.png",
+      "refs": ["dice_duel", "mines", "limbo", "tower_legend", "hilo", "rock_paper_scissors", "logo"],
+      "prompt": "Ultra realistic cinematic MYBC game-variety hero, dark luxury casino hall, deep purple and gold. A dramatic floating 3D cluster of premium glossy game tiles in a deep cinematic arc with strong perspective, some closer to camera some behind: glowing slot-reel tiles, a live-dealer roulette wheel tile, a live blackjack tile, and the SIX MYBC Originals cards using the attached thumbnails as EXACT artwork — Dice Duel (purple, pink & white dice), Mines (green-blue, FIFA ball on red tile), Limbo (teal, blue 500x/1000x tiles), Tower Legend (green, light-blue stone tower), Hilo (teal-blue, orange cards with red \"J heart\"), Rock Paper Scissors (blue-purple, three 3D hands) — each keeping its white \"ORIGINALS\" corner ribbon. Warm gold spotlights, blurred slot machines, floating gold coins and black-gold MYBC chips, soft smoke, glossy black casino floor, cinematic shallow depth of field. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. Bold premium gold text: \"ONE APP · EVERY GAME\". Ultra realistic 3D product photography, 16:9. Do not change the game artwork."
+    },
+    {
+      "id": "drop2",
+      "day": "Sun Jul 5", "slot": "MORN", "offer": "Free Rounds Drop (alt)",
+      "file": "img/drop2.png",
+      "refs": ["dice_duel", "mines", "hilo", "logo"],
+      "prompt": "Ultra realistic cinematic MYBC Free Rounds Drop visual, dark luxury casino, deep purple and navy, warm gold light, celebratory. Center: a giant glowing golden free-round \"FR\" coin/token bursting open with a shower of smaller gold FR coins and gold confetti; several black-and-gold gift boxes opening around it spilling glowing spin tokens. At the sides, three MYBC Originals game cards float keeping their EXACT artwork from the attached thumbnails — Dice Duel (purple card, pink & white dice), Mines (green-blue card, FIFA World Cup ball on red tile), Hilo (teal-to-blue card, orange cards with a red \"J heart\") — each with its white diagonal \"ORIGINALS\" corner ribbon. Soft smoke, blurred slot machines, glossy black casino table below, cinematic shallow depth of field. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. Bold premium gold text: \"FREE ROUNDS DROP\" and a small line \"ON MYBC ORIGINALS\". Ultra realistic 3D product photography, 16:9. No people, no hands, no cartoon."
+    }
+  ]
+}
