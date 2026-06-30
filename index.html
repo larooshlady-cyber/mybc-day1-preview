@@ -76,11 +76,11 @@
   <header>
     <div class="eyebrow">Week 1 · Static creatives + copy</div>
     <h1>MYBC — <span class="glow">Week 1</span> · Jun 29 → Jul 5</h1>
-    <p class="sub">World Cup <b>Round of 32 → Round of 16</b>. Every scheduled post with its <b>key visual</b> (16:9, 2752×1536) and full <b>Telegram caption</b>. Click any image to open full-size; hit <b>Copy</b> for the caption. Reusable offer visuals repeat across the week by design. Videos come next.</p>
+    <p class="sub">World Cup <b>Round of 32 → Round of 16</b>. Every scheduled post has its <b>own unique visual</b> (16:9, 2752×1536) and full <b>Telegram caption</b>. Click any image to open full-size; hit <b>Copy</b> for the caption. Videos come next.</p>
     <div class="meta-row">
       <div class="chip">Days · <b>7</b></div>
       <div class="chip">Posts · <b>18</b></div>
-      <div class="chip">Offer visuals · <b>10</b></div>
+      <div class="chip">Unique visuals · <b>18</b></div>
       <div class="chip">Format · <b>16:9 · 2K</b></div>
     </div>
     <div class="legend" id="legend"></div>
@@ -95,8 +95,11 @@
 </div>
 
 <script>
-const OFFERS = {
-  welcome:{name:'Welcome Bonus', c:'--welcome', img:'img/welcome.png', cap:`Hey Legends 👋
+const COL = {welcome:'--welcome',deposit:'--deposit',worldcup:'--worldcup',signup:'--signup',freebet:'--freebet',trust:'--trust',variety:'--variety',cashback:'--cashback',drop:'--drop'};
+
+const DAYS = [
+  {dow:'Mon', d:'Jun 29', round:'R32', posts:[
+    {slot:'MORN', k:'welcome', name:'Welcome Bonus', img:'img/welcome.png', cap:`Hey Legends 👋
 
 🔥 Your Welcome Bonus Is Here
 
@@ -112,11 +115,11 @@ Your total welcome rewards can reach up to:
 🎯 1500 USDT + 1500 Free Rounds
 
 Start your welcome journey 👉 https://mybc.game`},
-  deposit:{name:'Deposit Bonus', c:'--deposit', img:'img/deposit.png', cap:`Hey Legends 👋
+    {slot:'EVE', k:'deposit', name:'Deposit Bonus', img:'img/deposit.png', cap:`Hey Legends 👋
 
 🔥 Double Your Deposit Today
 
-For the next 24 hours, your deposit comes with 100% extra cash.
+The knockouts are live — for the next 24 hours your deposit comes with 100% extra cash.
 
 💰 Deposit $10+
 🎁 Get 100% Cash Bonus
@@ -126,7 +129,7 @@ For the next 24 hours, your deposit comes with 100% extra cash.
 ⏳ Available for 24 hours only.
 
 Jump in now 👉 https://mybc.game`},
-  worldcup32:{name:'World Cup · R32', c:'--worldcup', img:'img/worldcup_r32.png', cap:`Hey Legends 👋
+    {slot:'LATE', k:'worldcup', name:'World Cup · R32', img:'img/worldcup_r32.png', cap:`Hey Legends 👋
 
 ⚽ The Round of 32 Kicks Off Tonight
 
@@ -136,19 +139,11 @@ The whole World Cup bracket starts here — 32 teams, one trophy, every night li
 🎮 Pick your side, place your bet
 🎁 And check Promotions for extra match-night offers
 
-The bracket starts now 👉 https://mybc.game`},
-  worldcup16:{name:'World Cup · R16', c:'--worldcup', img:'img/worldcup_r16.png', cap:`Hey Legends 👋
+The bracket starts now 👉 https://mybc.game`}
+  ]},
 
-⚽ The Round of 16 Starts Now
-
-Bigger games, bigger nights — only 16 teams left and every match matters.
-
-🏆 Back your team on MYBC
-🎮 Pick your side, place your bet
-🎁 Check Promotions for match-night offers
-
-Place your bet 👉 https://mybc.game`},
-  signup:{name:'Sign-Up Gift', c:'--signup', img:'img/signup.png', cap:`Hey Legends 👋
+  {dow:'Tue', d:'Jun 30', round:'R32', posts:[
+    {slot:'MORN', k:'signup', name:'Sign-Up Gift', img:'img/signup.png', cap:`Hey Legends 👋
 
 🎁 Your Sign-Up Gift Is Waiting
 
@@ -161,7 +156,7 @@ Finish a quick KYC and pick the welcome gift you want:
 Want more? Verify your Telegram + mobile for an extra +$15.
 
 Grab your gift 👉 https://mybc.game`},
-  freebet:{name:'Insured Freebet', c:'--freebet', img:'img/freebet.png', cap:`Hey Legends 👋
+    {slot:'EVE', k:'freebet', name:'Insured Freebet', img:'img/freebet.png', cap:`Hey Legends 👋
 
 🛡️ Your World Cup Bet Is Insured
 
@@ -174,8 +169,11 @@ Place a World Cup bet today and play with extra confidence. If it loses, MYBC gi
 
 Bet today, get backup tomorrow.
 
-Start now 👉 https://mybc.game`},
-  trust:{name:'Trustpilot · 50 FS', c:'--trust', img:'img/trust.png', cap:`Hey Legends 👋
+Start now 👉 https://mybc.game`}
+  ]},
+
+  {dow:'Wed', d:'Jul 1', round:'R32', posts:[
+    {slot:'MORN', k:'trust', name:'Trustpilot · 50 FS', img:'img/trust.png', cap:`Hey Legends 👋
 
 🎁 Get 50 Free Spins on MYBC Originals
 
@@ -188,7 +186,7 @@ Once your review is fully published, send the link to our Customer Support team.
 🎁 Reward: 50 FS on MYBC Originals
 
 Start now 👉 https://mybc.game`},
-  variety:{name:'Game Variety', c:'--variety', img:'img/variety.png', cap:`Hey Legends 👋
+    {slot:'AFTN', k:'variety', name:'Game Variety', img:'img/variety.png', cap:`Hey Legends 👋
 
 🎮 Thousands of Games, One App
 
@@ -199,7 +197,24 @@ Slots, live tables, crash games and MYBC Originals — all in one place. Whateve
 🎲 MYBC Originals — Dice Duel, Mines, Limbo & more
 
 Pick your lane 👉 https://mybc.game`},
-  cashback:{name:'48% Cashback', c:'--cashback', img:'img/cashback.png', cap:`Hey Legends 👋
+    {slot:'EVE', k:'deposit', name:'Deposit Bonus', img:'img/deposit2.png', cap:`Hey Legends 👋
+
+🔥 Match-Night Top-Up
+
+Big games tonight — load up and play with double. Deposit today and your balance gets a clean 100% cash boost.
+
+💰 Deposit $10+
+🎁 100% extra cash
+🎯 Up to 200 USDT
+🎰 20x wagering in slots
+
+⏳ Next 24 hours only.
+
+Jump in now 👉 https://mybc.game`}
+  ]},
+
+  {dow:'Thu', d:'Jul 2', round:'R32', posts:[
+    {slot:'MORN', k:'cashback', name:'48% Cashback', img:'img/cashback.png', cap:`Hey Legends 👋
 
 ♻️ 48% Cashback, Always Working
 
@@ -210,7 +225,7 @@ Your cashback runs quietly in the background on every session — so you win som
 ⭐ Part of your 5-Star account
 
 Check your account 👉 https://mybc.game`},
-  drop:{name:'Free Rounds Drop', c:'--drop', img:'img/drop.png', cap:`Hey Legends 👋
+    {slot:'EVE', k:'drop', name:'Free Rounds Drop', img:'img/drop.png', cap:`Hey Legends 👋
 
 🎁 Free Rounds Drop Is Live
 
@@ -223,32 +238,130 @@ We've dropped Free Rounds for everyone on MYBC Originals games.
 ⏳ Active for the next 24 hours only
 
 Check now 👉 https://mybc.game`}
-};
+  ]},
 
-const DAYS = [
-  {dow:'Mon', d:'Jun 29', round:'R32', posts:[['MORN','welcome'],['EVE','deposit'],['LATE','worldcup32']]},
-  {dow:'Tue', d:'Jun 30', round:'R32', posts:[['MORN','signup'],['EVE','freebet']]},
-  {dow:'Wed', d:'Jul 1',  round:'R32', posts:[['MORN','trust'],['AFTN','variety'],['EVE','deposit']]},
-  {dow:'Thu', d:'Jul 2',  round:'R32', posts:[['MORN','cashback'],['EVE','drop']]},
-  {dow:'Fri', d:'Jul 3',  round:'R32', posts:[['MORN','welcome'],['EVE','deposit'],['LATE','freebet']]},
-  {dow:'Sat', d:'Jul 4',  round:'R16', posts:[['MORN','signup'],['AFTN','variety'],['EVE','worldcup16']]},
-  {dow:'Sun', d:'Jul 5',  round:'R16', posts:[['MORN','drop'],['EVE','deposit']]}
+  {dow:'Fri', d:'Jul 3', round:'R32', posts:[
+    {slot:'MORN', k:'welcome', name:'Welcome Bonus', img:'img/welcome2.png', cap:`Hey Legends 👋
+
+🔥 Your Welcome Package
+
+First weekend on MYBC? Your welcome rewards stack across your first 3 deposits.
+
+💰 100% Cash Bonus on each
+🎰 100% Free Rounds on each
+🎯 Up to 1500 USDT + 1500 Free Rounds in total
+
+Start your journey 👉 https://mybc.game`},
+    {slot:'EVE', k:'deposit', name:'Deposit Bonus', img:'img/deposit3.png', cap:`Hey Legends 👋
+
+🔥 Weekend 2X Is Live
+
+It's the weekend and the final R32 nights are here. Deposit today and double your balance with 100% extra cash.
+
+💰 Deposit $10+
+🎁 100% Cash Bonus
+🎯 Up to 200 USDT
+🎰 20x in slots
+
+⏳ 24 hours only.
+
+Start now 👉 https://mybc.game`},
+    {slot:'LATE', k:'freebet', name:'Insured Freebet', img:'img/freebet2.png', cap:`Hey Legends 👋
+
+🛡️ Ride Tonight's Games Insured
+
+Back the last of the Round of 32 with a safety net. If your bet loses, MYBC gives you 100% back as a Freebet tomorrow 🔥
+
+✅ Min 3 selections
+✅ At least 1 winning selection
+✅ Odds 1.30+ each
+✅ Up to 100 USDT Freebet
+
+Start now 👉 https://mybc.game`}
+  ]},
+
+  {dow:'Sat', d:'Jul 4', round:'R16', posts:[
+    {slot:'MORN', k:'signup', name:'Sign-Up Gift', img:'img/signup2.png', cap:`Hey Legends 👋
+
+🎁 Claim Your Sign-Up Gift
+
+New this weekend? Finish a quick KYC and pick your welcome gift:
+
+🎟️ $10 Freebet
+🎰 50 Free Spins
+🔄 75 Free Rounds
+
+Verify your Telegram + mobile for an extra +$15.
+
+Grab yours 👉 https://mybc.game`},
+    {slot:'AFTN', k:'variety', name:'Game Variety', img:'img/variety2.png', cap:`Hey Legends 👋
+
+🎮 One App · Every Game
+
+Long weekend, full lobby. Slots, live tables, crash and MYBC Originals — all in one place.
+
+🎰 Slots & jackpots
+🃏 Live casino
+🎲 MYBC Originals
+
+See what's hot 👉 https://mybc.game`},
+    {slot:'EVE', k:'worldcup', name:'World Cup · R16', img:'img/worldcup_r16.png', cap:`Hey Legends 👋
+
+⚽ The Round of 16 Starts Now
+
+Bigger games, bigger nights — only 16 teams left and every match matters.
+
+🏆 Back your team on MYBC
+🎮 Pick your side, place your bet
+🎁 Check Promotions for match-night offers
+
+Place your bet 👉 https://mybc.game`}
+  ]},
+
+  {dow:'Sun', d:'Jul 5', round:'R16', posts:[
+    {slot:'MORN', k:'drop', name:'Free Rounds Drop', img:'img/drop2.png', cap:`Hey Legends 👋
+
+🎁 Another Free Rounds Drop Is Here
+
+We've dropped Free Rounds for everyone on MYBC Originals.
+
+✅ Open MYBC
+🎁 See what you got
+🎮 Play it
+
+⏳ Active for 24 hours only.
+
+Check now 👉 https://mybc.game`},
+    {slot:'EVE', k:'deposit', name:'Deposit Bonus', img:'img/deposit4.png', cap:`Hey Legends 👋
+
+🔥 Sunday 2X Deposit
+
+Round of 16 night — make it bigger. Deposit today and get 100% extra cash on top.
+
+💰 Deposit $10+
+🎁 100% Cash Bonus
+🎯 Up to 200 USDT
+🎰 20x in slots
+
+⏳ Available for 24 hours.
+
+Jump in now 👉 https://mybc.game`}
+  ]}
 ];
 
-// legend
-const seen=new Set();
-document.getElementById('legend').innerHTML = Object.values(OFFERS).filter(o=>{if(seen.has(o.name))return false;seen.add(o.name);return true;})
-  .map(o=>`<span class="key"><span class="dot" style="background:var(${o.c})"></span>${o.name}</span>`).join('');
+// legend (unique offer types)
+const LG=[['Welcome Bonus','welcome'],['Deposit Bonus','deposit'],['World Cup','worldcup'],['Sign-Up Gift','signup'],['Insured Freebet','freebet'],['Trustpilot · 50 FS','trust'],['Game Variety','variety'],['48% Cashback','cashback'],['Free Rounds Drop','drop']];
+document.getElementById('legend').innerHTML = LG.map(([n,k])=>`<span class="key"><span class="dot" style="background:var(${COL[k]})"></span>${n}</span>`).join('');
 
 // week
 const wk=document.getElementById('week');
 DAYS.forEach((day,di)=>{
-  const cards = day.posts.map(([slot,key])=>{
-    const o=OFFERS[key]; const id='c'+di+slot;
-    return `<div class="card" style="--c:var(${o.c})">
-      <a class="imgwrap" href="${o.img}" target="_blank"><img src="${o.img}" alt="${o.name}"></a>
-      <div class="card-head"><span class="slot">${slot}</span><span class="oname">${o.name}</span><button class="copybtn" data-t="${id}">Copy</button></div>
-      <div class="copy" id="${id}">${o.cap}</div>
+  const cards = day.posts.map((p,pi)=>{
+    const id='c'+di+'_'+pi; const c=COL[p.k];
+    return `<div class="card" style="--c:var(${c})">
+      <a class="imgwrap" href="${p.img}" target="_blank"><img src="${p.img}" alt="${p.name}"></a>
+      <div class="card-head"><span class="slot">${p.slot}</span><span class="oname">${p.name}</span><button class="copybtn" data-t="${id}">Copy</button></div>
+      <div class="copy" id="${id}">${p.cap}</div>
     </div>`;
   }).join('');
   wk.insertAdjacentHTML('beforeend', `<section class="day">
