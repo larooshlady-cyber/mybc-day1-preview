@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MYBC · ARG vs CPV — VS card options</title>
+<title>MYBC · ARG vs CPV · VS card options</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0a0d1a;--panel:#121829;--line:#23304f;--ink:#eaf0ff;--dim:#93a0c2}
@@ -22,9 +22,9 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:28px;margin-bottom:4px}
 @media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr)}}
 </style></head><body><div class="wrap">
-<h1>ARG vs Cape Verde — VS card · 10 options</h1>
+<h1>ARG vs Cape Verde · VS card · 10 options</h1>
 <div class="sub">1:1 · 2752px · click any tile to open full-size. Pick the one(s) you want; tell me the number(s).</div>
-<div class="note">All centered VS · rim light + contrast for small-tile readability. v05 has a wrong FIFA wordmark ("Qatar 2022") — flag it if you pick it and I'll fix.</div>
+<div class="note">All centered VS · rim light + contrast for small-tile readability. v05 has a wrong FIFA wordmark ("Qatar 2022"). Flag it if you pick it and I'll fix.</div>
 <div class="grid" id="g"></div>
 <div class="sec">How it looks in the carousel slot (mini preview)</div>
 <div class="small" id="mini"></div>
@@ -33,13 +33,13 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:28px;margin-bottom:4px}
 const items=[
 ["v01","Angled · gold VS","Flags angled inward, gold VS + cyan glow"],
 ["v02","Angled · compact","Same, smaller flags, more bg"],
-["v03","Banners · cyan diamond","Tall banners, cyan diamond VS — clean"],
+["v03","Banners · cyan diamond","Tall banners, cyan diamond VS, clean"],
 ["v04","Glow rim · high contrast","Heavy cyan rim-light, very punchy"],
 ["v05","Crossed poles · gold","Premium crossed flags (⚠ wrong WC text)"],
 ["v06","Crossing · gold VS","Flags crossing behind gold VS"],
 ["v07","Diagonal split","ARG top-left / CPV bottom-right, cyan seam"],
 ["v08","Diagonal split 2","Split variant, brighter seam"],
-["v09","Badge VS · 2026","Dark VS medallion — best small readability"],
+["v09","Badge VS · 2026","Dark VS medallion, best small readability"],
 ["v10","Ring VS · clean","Cyan-ring VS badge, tidy layout"]
 ];
 g.innerHTML=items.map(([id,lab,desc])=>`<div class="cell"><a class="tile" href="vs/${id}.png" target="_blank"><img src="vs/${id}.png" loading="lazy" alt="${lab}"></a><div class="lab">${id.toUpperCase()} · ${lab}</div><div class="desc">${desc}</div></div>`).join('');
