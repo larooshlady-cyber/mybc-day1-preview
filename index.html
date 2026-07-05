@@ -85,8 +85,8 @@
     <p class="sub">World Cup <b>Round of 32 → Round of 16</b>. Every scheduled post has its <b>own unique visual</b> (16:9, 2752×1536) and full <b>Telegram caption</b>. Each post is a <b>5s animation</b> (1080p): click <b>&#9654;</b> to play. Hit <b>Copy</b> for the caption. <b>↻ Regen</b> copies a ready command. Paste it into Claude CLI (in the <code>MYBC_Day1</code> folder) to re-roll that image locally. </p>
     <div class="meta-row">
       <div class="chip">Days · <b>7</b></div>
-      <div class="chip">Posts · <b>18</b></div>
-      <div class="chip">Animated · <b>18 × 5s</b></div>
+      <div class="chip">Posts · <b>20</b></div>
+      <div class="chip">Animated · <b>20 × 5s</b></div>
       <div class="chip">Format · <b>16:9 · 2K</b></div>
     </div>
     <div class="legend" id="legend"></div>
@@ -104,6 +104,35 @@
 const COL = {welcome:'--welcome',deposit:'--deposit',worldcup:'--worldcup',signup:'--signup',freebet:'--freebet',trust:'--trust',variety:'--variety',cashback:'--cashback',drop:'--drop'};
 
 const DAYS = [
+  {dow:'New', d:'Fresh Drops', round:'NEW', posts:[
+    {slot:'NEW', k:'deposit', name:'2X Deposit · Vault', img:'img/deposit_x2_new.png', cap:`Hey Legends 👋
+
+🔥 Double Your Deposit · 2X Is Live
+
+Load up today and your deposit comes with 100% extra cash on top.
+
+💰 Deposit $10+
+🎁 100% Cash Bonus
+🎯 Up to 200 USDT
+🎰 20x wagering in slots
+
+Jump in now 👉 https://mybc.game`},
+    {slot:'NEW', k:'freebet', name:'Insured Freebet · Shield', img:'img/freebet_ins_new.png', cap:`Hey Legends 👋
+
+⚽️🔥 Your Freebet Is Insured
+
+Back your bet today with a safety net.
+
+If your 1st eligible ticket during the day loses, MYBC gives you 100% back as another Freebet tomorrow 🔥
+
+✅ Min 3 selections
+✅ At least 1 match selection
+✅ Odds 1.30+ each
+✅ Up to 100 USDT Freebet
+
+Start now 👉 https://mybc.game`}
+  ]},
+
   {dow:'Mon', d:'Jun 29', round:'R32', posts:[
     {slot:'MORN', k:'welcome', name:'Welcome Bonus', img:'img/welcome.png', cap:`Hey Legends 👋
 
