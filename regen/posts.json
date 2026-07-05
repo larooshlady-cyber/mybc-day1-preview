@@ -15,6 +15,30 @@
   },
   "posts": [
     {
+      "id": "freebet_ins_new",
+      "day": "Fresh",
+      "slot": "NEW",
+      "offer": "Insured Freebet · Shield",
+      "file": "img/freebet_ins_new.png",
+      "refs": [
+        "logo",
+        "ui"
+      ],
+      "prompt": "Photorealistic cinematic MYBC Insured Freebet sportsbook visual. Center: a premium black-and-gold betting ticket hovering upright inside a glowing transparent protective shield dome (force-field bubble), bold readable text on the ticket \"BET INSURED\" and \"100% BACK AS FREEBET\", a realistic soccer ball resting on fresh green stadium grass beside it, gold coins and a few cash bills floating around the shield. Behind: a golden tournament-style trophy softly blurred under stadium floodlights, blue and purple light beams, soft fog, golden confetti, crowd bokeh. Dark purple MYBC brand shadows mixed with stadium light and gold accents. A small gold plaque reads \"UP TO 100 USDT FREEBET\". Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. 85mm, shallow depth of field, ultra realistic high-end commercial photography, 16:9. No real logos, no people, no hands, no cartoon."
+    },
+    {
+      "id": "deposit_x2_new",
+      "day": "Fresh",
+      "slot": "NEW",
+      "offer": "2X Deposit · Vault",
+      "file": "img/deposit_x2_new.png",
+      "refs": [
+        "logo",
+        "ui"
+      ],
+      "prompt": "Photorealistic high-end MYBC 100% Deposit Bonus advertising visual, dark purple casino mood with warm gold rim light. Center: a heavy black-and-gold MYBC vault door swung open on a glossy dark purple casino table, a large polished gold \"2X\" emblem glowing above the doorway, thick bundles of cash, gold USDT coins and black-and-gold casino chips cascading out of the vault and spilling forward across the reflective table. Bold readable gold plaque reading \"100% DEPOSIT BONUS\" and smaller \"UP TO 200 USDT\". Rising gold sparks, faint smoke, soft golden bokeh. Background: blurred MYBC casino dashboard on a laptop and phone (use the MYBC dashboard UI reference), deep purple interface, orange CTA buttons, green table reflections, unreadable UI. Place the white handwritten MYBC logo reference exactly as provided in the bottom-right corner. 85mm, shallow depth of field, ultra realistic high-end commercial product photography, 16:9. No people, no hands, no cartoon, no cheap plastic."
+    },
+    {
       "id": "welcome",
       "day": "Mon Jun 29",
       "slot": "MORN",
